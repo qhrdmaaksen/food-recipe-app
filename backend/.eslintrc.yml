@@ -1,0 +1,28 @@
+{
+  "env":
+    "browser": true
+    "es2021": true
+    "node": true
+    "extends": [
+      "standard-with-typescript",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier" // eslint 와 prettier 충돌 방지
+    ],
+  "overrides": [ ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error", // 사용하지 않는 규칙 에러
+    "@typescript-eslint/consistent-type-definitions": [
+      "error"
+      "type"
+    ],
+  }
+}
