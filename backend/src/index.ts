@@ -4,6 +4,7 @@ import express, { Request, Response, Application } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import { connect } from "mongoose";
+import { authRouter, recipeRouter } from "./routes";
 
 // 익스프레스 에플리케이션 생성
 const app: Application = express();
@@ -21,6 +22,15 @@ app.use(cors());
 app.use(helmet());
 
 const PORT = (process.env.PORT as unknown as number) || 5000;
+
+// 라우터 설정
+/* routes folder 에서 별칭 authRouter, recipeRouter 로 내보낸걸 가져와 설정함*/
+app.use("/auth", authRouter);
+app.use("/recipe", recipeRouter);
+
+app.get("/ping", (req: Request, res: Response) => {
+  res.send("pong");
+});
 
 // 404 에러 처리
 app.all("*", (req: Request, res: Response) => {
