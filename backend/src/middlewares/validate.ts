@@ -7,7 +7,7 @@ import { InferType } from "yup";
 
 // 요청 데이터의 유효성을 검사하는 미들웨어
 export const validate =
-    // schema 는 yup 의 스키마 객체 (mongodb 의 스키마가 아님)
+  // schema 는 yup 의 스키마 객체 (mongodb 의 스키마가 아님)
   (schema: any) => async (req: Request, res: Response, next: NextFunction) => {
     try {
       await schema.validate({
