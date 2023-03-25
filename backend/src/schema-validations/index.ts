@@ -11,18 +11,23 @@ const createRecipeSchema: yup.AnyObjectSchema = yup.object({
   }),
 });
 
+// 단일 레시피 조회 유효성 검사 스키마
 const getRecipeSchema = yup.object({
   params: yup.object({
+
     id: yup.string().min(24).required("invalid request"),
   }),
 });
 
+// 레시피 검색 유효성 검사 스키마
 const searchRecipeSchema = yup.object({
+
   query: yup.object({
     q: yup.string().required("invalid request"),
   }),
 });
 
+// 사용자 레시피 조회 유효성 검사 스키마
 const getUserRecipesSchema = yup.object({
   params: yup.object({
     userId: yup.string().min(24).required("invalid request"),
