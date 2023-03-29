@@ -4,44 +4,45 @@ import * as yup from "yup";
 // 레시피 등록 유효성 검사 스키마
 const createRecipeSchema: yup.AnyObjectSchema = yup.object({
   body: yup.object({
-    title: yup.string().required("title is required"),
+    title: yup.string().required("제목이 필요합니다"),
     note: yup.string(),
-    ingredients: yup.string().required("ingredients is required"),
-    description: yup.string().required("description is required"),
+    ingredients: yup.string().required("재료가 필요합니다"),
+    description: yup.string().required("설명이 필요합니다"),
   }),
 });
 
 // 단일 레시피 조회 유효성 검사 스키마
 const getRecipeSchema = yup.object({
   params: yup.object({
-
-    id: yup.string().min(24).required("invalid request"),
+    // 레시피 아이디가 24자리 이상이어야 함
+    id: yup.string().min(24).required("잘못된 요청"),
   }),
 });
 
 // 레시피 검색 유효성 검사 스키마
 const searchRecipeSchema = yup.object({
-
+  // 검색어가 존재해야 함
   query: yup.object({
-    q: yup.string().required("invalid request"),
+    q: yup.string().required("잘못된 요청"),
   }),
 });
 
-// 사용자 레시피 조회 유효성 검사 스키마
+// 유저 레시피 조회 유효성 검사 스키마
 const getUserRecipesSchema = yup.object({
   params: yup.object({
-    userId: yup.string().min(24).required("invalid request"),
+    // 사용자 아이디가 24자리 이상이어야 함
+    userId: yup.string().min(24).required("잘못된 요청"),
   }),
 });
 
 //register or login 유효성 검사 스키마
 const joinSchema = yup.object({
   body: yup.object({
-    email: yup.string().email().required("Email is required"),
+    email: yup.string().email().required("이메일이 필요합니다"),
     password: yup
-        .string()
-        .min(7, "password must be greater than 6")
-        .required("Password is required"),
+      .string()
+      .min(7, "암호는 6보다 커야 합니다.")
+      .required("비밀번호가 필요합니다"),
   }),
 });
 

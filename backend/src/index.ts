@@ -8,7 +8,6 @@ import { authRouter, recipeRouter } from "./routes";
 
 // 익스프레스 에플리케이션 생성
 const app: Application = express();
-
 // 미들웨어 설정
 // express.json() 미들웨어는 application/json 형식의 데이터를 분석하여 req.body 객체로 만들어준다.
 app.use(express.json());
