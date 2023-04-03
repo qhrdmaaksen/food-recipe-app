@@ -1,14 +1,14 @@
 import { Schema, model, models, Model } from "mongoose";
 
 // User 타입 정의
-interface IUser {
-  _id: string;
+export interface IUser {
+  _id?: string;
   email: string;
   password: string;
 }
 
 // User 스키마 정의
-const userSchema = new Schema(
+const userSchema = new Schema<IUser>(
   {
     email: {
       type: String,

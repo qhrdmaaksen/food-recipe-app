@@ -32,9 +32,9 @@ app.get("/ping", (req: Request, res: Response) => {
 });
 
 // 404 에러 처리
-app.all("*", (req: Request, res: Response) => {
+app.all("*", async (req: Request, res: Response) => {
   res.status(404).json({
-    message: "요청하신 페이지를 찾을 수 없습니다.",
+    error: "요청하신 페이지를 찾을 수 없습니다.",
   });
 });
 

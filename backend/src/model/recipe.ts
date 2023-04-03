@@ -9,8 +9,8 @@ interface IImage {
 // 1. MongoDB 에서 문서를 나타내는 인터페이스를 생성
 interface IRecipe {
   title: string;
-  note?: string;
   description: string;
+  note: string;
   ingredients: string;
   image: IImage;
   user?: string;
