@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { User } from "../model";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import {CONSTANTS} from "src/constants";
 
 // 토큰을 발급하는 함수
 const signToken = (id: string) => {
@@ -30,15 +31,16 @@ export const registerOrLogin = async (req: Request, res: Response) => {
       return res.status(200).json({ token, email, id: _user?.id });
     }
     // 데이터 베이스에 등록된 유저 정보가 없는 경우 새로운 유저 등록 후 토큰 발급
-    const newUser = await User.create({ email, password });
+    const newUser = await User.create({ email, password: await bcrypt.hash(password, CONSTANTS.SALT) });
     const token = signToken(newUser?._id as unknown as string);
 
     return res
       .status(201)
       .json({ token, email: newUser?.email, id: newUser._id });
   } catch (error) {
-    return res.status(500).json({error: "요청을 처리하는 동안 오류가 발생했습니다"})
+    console.log(error)
+    return res
+      .status(500)
+      .json({ error: "요청을 처리하는 동안 오류가 발생했습니다" });
   }
-
-  return res.send("YEAH, you joined");
 };
