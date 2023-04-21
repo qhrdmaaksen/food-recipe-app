@@ -6,7 +6,7 @@ export interface SEARCH_RECIPES {
     description: string;
     title: string;
     ingredients: string;
-    image: string;
+    image: IMAGE;
 }
 
 export interface SEARCH_RECIPES_RESPONSE {
@@ -24,5 +24,5 @@ interface SEARCH_USER {
 
 interface IMAGE {
     id: string;
-    url: string;
+    ur: string;
 }

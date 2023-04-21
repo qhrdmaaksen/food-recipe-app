@@ -1,16 +1,16 @@
 import { Request, Response } from "express";
 import { Recipe } from "src/model";
-import {SEARCH_RECIPES, SEARCH_RECIPES_RESPONSE} from "../@types/index.d";
+import { SEARCH_RECIPES, SEARCH_RECIPES_RESPONSE } from "../@types/index.d";
 
 export const searchRecipe = async (req: Request, res: Response) => {
   // 클라이언트에게 전달받은 검색어
   const { q } = req.query;
 
   /*
-  * pipeline 을 사용하여 검색어를 포함하는 레시피를 가져온다.
-  * &lookup 을 사용하여 user 필드를 채워준다.
-  * $project 를 사용하여 필요한 필드만 가져온다.
-  * */
+   * pipeline 을 사용하여 검색어를 포함하는 레시피를 가져온다.
+   * &lookup 을 사용하여 user 필드를 채워준다.
+   * $project 를 사용하여 필요한 필드만 가져온다.
+   * */
   const pipeline = [
     {
       $search: {
@@ -40,34 +40,38 @@ export const searchRecipe = async (req: Request, res: Response) => {
         title: 1,
         ingredients: 1,
         image: 1,
-      }
+      },
     },
   ];
   /*
-  * aggregate() 메서드를 사용하여 pipeline 을 실행한다.
-  * pipeline 을 실행한 결과를 recipes 에 할당한다.
-  * recipes 는 SEARCH_RECIPES 타입의 배열이다.
-  * SEARCH_RECIPES 타입은 backend\src\@types\index.d.ts 에 정의되어 있다.
-  * SEARCH_RECIPES 타입은 user 필드를 가지고 있으며, user 필드는 SEARCH_USER 타입의 배열이다.
-  * SEARCH_USER 타입은 email 필드를 가지고 있다.
-  * SEARCH_RECIPES 타입은 note, description, title, ingredients, image 필드를 가지고 있다.
-  * */
-  const recipes: SEARCH_RECIPES[] = await Recipe.aggregate(pipeline);
+   * aggregate() 메서드를 사용하여 pipeline 을 실행한다.
+   * pipeline 을 실행한 결과를 recipes 에 할당한다.
+   * recipes 는 SEARCH_RECIPES 타입의 배열이다.
+   * SEARCH_RECIPES 타입은 backend\src\@types\index.d.ts 에 정의되어 있다.
+   * SEARCH_RECIPES 타입은 user 필드를 가지고 있으며, user 필드는 SEARCH_USER 타입의 배열이다.
+   * SEARCH_USER 타입은 email 필드를 가지고 있다.
+   * SEARCH_RECIPES 타입은 note, description, title, ingredients, image 필드를 가지고 있다.
+   * */
+  const recipes: SEARCH_RECIPES[] = await Recipe.aggregate(pipeline).sort({
+    _id: -1,
+  });
 
   let response: SEARCH_RECIPES_RESPONSE[] = [];
 
-  if(!recipes?.length) {
+  if (!!recipes?.length) {
     response = recipes.map((recipe: SEARCH_RECIPES) => {
-      const {user, ...rest} = recipe;
+      const { user, ...rest } = recipe;
 
-      const email = user[0].email
+      const email = user[0].email;
 
       return {
         user: email,
-        ...rest
-      }
-    })
+        ...rest,
+      };
+    });
   }
+
+  res.status(200).json(response);
 };
 
 // 모든 레시피 정보를 가져오는 함수

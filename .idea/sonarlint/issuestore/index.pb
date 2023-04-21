@@ -6,8 +6,6 @@ A
 E
 backend/tsconfig.json,2\d\2de55f36b9608859c02740cfa56b943f6eff3a73
 P
- backend/src/controllers/index.ts,5\c\5c4a32c66993b1d2fda879ba5d83473dc29319e0
-P
  backend/src/middlewares/index.ts,8\5\854276991a6b1bc33881c62c430ff87c86ddd46c
 S
 #backend/src/middlewares/validate.ts,7\1\71825620664755bb5f00a711c4ad0945d787c92f
@@ -21,5 +19,5 @@ K
 backend/.env,f\3\f30451335edfb80e231f658d0defc83bb7e4c3a7
 B
 backend/.gitignore,7\e\7e16691a9fc60084a157565ec422c8094d3df67c
-L
-backend/src/routes/recipe.ts,0\6\060942cc7f53c20811a55e64feedfc3e227f46fd
+D
+backend/src/index.ts,c\a\cadccc3f718c67fe80df9a5bc7dcc79a0a032c23
