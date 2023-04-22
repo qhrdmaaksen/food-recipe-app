@@ -5,6 +5,9 @@ import cors from "cors";
 import helmet from "helmet";
 import { connect } from "mongoose";
 import { authRouter, recipeRouter } from "./routes";
+import passport from "passport";
+import { authenticate } from "./config";
+import fileUpload from "express-fileupload";
 
 // 익스프레스 에플리케이션 생성
 const app: Application = express();
@@ -19,6 +22,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 // helmet 미들웨어는 애플리케이션의 보안을 강화해준다.
 app.use(helmet());
+
+// 파일 업로드 미들웨어 설정
+app.use(fileUpload({
+  limits: { fileSize: 50 * 1024 * 1024 },
+  abortOnLimit: true,
+}))
+
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport config
+authenticate(passport);
 
 const PORT = (process.env.PORT as unknown as number) || 5000;
 

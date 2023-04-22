@@ -1,6 +1,46 @@
 import { Request, Response } from "express";
-import { Recipe } from "src/model";
+import { Recipe } from "../model";
 import { SEARCH_RECIPES, SEARCH_RECIPES_RESPONSE } from "../@types/index.d";
+import { UploadedFile } from "express-fileupload";
+import { validateImageType } from "../utils";
+import * as path from "path";
+
+// 레시피를 생성하는 함수
+export const createRecipe = async (req: Request, res: Response) => {
+  // 요청을 보낸 사용자가 로그인 상태가 아니라면 요청을 처리할 수 없다는 에러를 응답
+  if (!req.user) {
+    return res.status(422).json({ error: "요청을 처리할 수 없습니다." });
+  }
+  // 파일 업로드 요청 시 파일이 없다면 요청을 처리할 수 없다는 에러를 응답
+  if (!req.files || Object.keys(req.files).length === 0) {
+    return res.status(400).json({ error: "업로드할 파일을 찾을 수 없습니다." });
+  }
+
+  // 클라이언트에게 전달받은 데이터
+  const image = req.files.image as UploadedFile;
+
+  // 파일 형식이 정의된(src/utils/image) 형식이 아니라면 요청을 처리할 수 없다는 에러를 응답
+  if (!validateImageType(image)) {
+    return res.status(422).json({ error: "지원되지 않는 파일 형식입니다." });
+  }
+  /*
+  // 디스크에 저장하려면 다음을 사용합니다.
+  const fileName = Date.now() + image.name;
+  const pathToFile = path.resolve(
+      __dirname + "../../../assets/" + fileName
+  )
+
+  image.mv(pathToFile, (err) => {
+    if(err) {
+      return res.status(500).json({ error: "파일을 저장할 수 없습니다."})
+    }
+  })
+  */
+
+  // calling cloudinary
+  let imageUrl: string;
+  let iamageId: string;
+};
 
 export const searchRecipe = async (req: Request, res: Response) => {
   // 클라이언트에게 전달받은 검색어
@@ -52,9 +92,11 @@ export const searchRecipe = async (req: Request, res: Response) => {
    * SEARCH_USER 타입은 email 필드를 가지고 있다.
    * SEARCH_RECIPES 타입은 note, description, title, ingredients, image 필드를 가지고 있다.
    * */
-  const recipes: SEARCH_RECIPES[] = await Recipe.aggregate(pipeline).sort({
-    _id: -1,
-  });
+  const recipes: SEARCH_RECIPES[] = await Recipe.aggregate(pipeline)
+    .sort({
+      _id: -1,
+    })
+    .exec();
 
   let response: SEARCH_RECIPES_RESPONSE[] = [];
 
