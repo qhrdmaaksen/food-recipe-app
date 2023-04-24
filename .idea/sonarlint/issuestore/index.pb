@@ -23,9 +23,13 @@ K
 backend/src/routes/index.ts,f\f\ffa12e4050dd01b6a999ca4ce4c0c13c911fc3c5
 J
 backend/src/model/index.ts,3\9\392ee5521231283322d11918923f26d63c4f48f6
-K
-backend/src/model/recipe.ts,2\1\21252ac434155d586059b68208ceaf4f8cc26767
 A
 backend/yarn.lock,4\f\4f2f30c812f116d7d7980710a3d6789027dbb398
 D
 backend/package.json,2\d\2d67691333633e849af94af966942f0c1b3151c6
+K
+backend/src/config/index.ts,b\9\b95636bbb9a07eaf5fa64cc79b38eaefc9b745e5
+<
+backend/.env,f\3\f30451335edfb80e231f658d0defc83bb7e4c3a7
+F
+backend/yarn-error.log,a\2\a21fefc96740bc8af9da531c7dacc01066f6a6a1

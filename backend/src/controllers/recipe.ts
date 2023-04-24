@@ -4,6 +4,7 @@ import { SEARCH_RECIPES, SEARCH_RECIPES_RESPONSE } from "../@types/index.d";
 import { UploadedFile } from "express-fileupload";
 import { validateImageType } from "../utils";
 import * as path from "path";
+import { upload } from "../cloudinary";
 
 // 레시피를 생성하는 함수
 export const createRecipe = async (req: Request, res: Response) => {
@@ -38,8 +39,50 @@ export const createRecipe = async (req: Request, res: Response) => {
   */
 
   // calling cloudinary
-  let imageUrl: string;
-  let iamageId: string;
+  let imageUrl: string = "";
+  let imageId: string = "";
+
+  try {
+    const res = await upload(image.data, "Images");
+    if (res) {
+      // cloudinary 에서 받은 응답을 imageUrl, imageId 에 할당
+      imageUrl = res.secure_url;
+      imageId = res.public_id;
+    }
+  } catch (error) {
+    console.log(error, "cloudinary error");
+    return res.status(400).json({ error: error });
+  }
+  // 클라이언트에게 전달받은 데이터 중에서 필요한 데이터만 추출
+  const {
+    title,
+    note,
+    description,
+    ingredients,
+  }: { title: string; note: string; description: string; ingredients: string } =
+    req.body;
+
+  try {
+    const newRecipe = await Recipe.create({
+      user: req.user,
+      title,
+      note,
+      description,
+      ingredients,
+      image: {
+        url: imageUrl,
+        id: imageId,
+      },
+    });
+    return res
+      .status(201)
+      .json({ message: "레시피가 성공적으로 생성되었습니다.", ...newRecipe });
+  } catch (error) {
+    console.log(error);
+    return res
+      .status(500)
+      .json({ error: "요청을 처리하는 동안 오류가 발생했습니다." });
+  }
 };
 
 export const searchRecipe = async (req: Request, res: Response) => {

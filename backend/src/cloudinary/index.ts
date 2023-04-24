@@ -25,6 +25,7 @@ export const upload = async (
     .webp({ quality: 90 })
     .toBuffer();
 
+  // cloudinary에 new Promise 를 사용하여 업로드
   return new Promise((resolve, reject) => {
       const upload = cloudinary.uploader.upload_stream(
           (error: UploadApiErrorResponse, result: UploadApiResponse) => {
@@ -34,6 +35,7 @@ export const upload = async (
               resolve(result);
           }
       )
+      // toStream 을 사용하여 파일을 스트림으로 변환 후 폴더 이름과 함께 cloudinary에 업로드
       toStream(bufferOfFile).pipe(upload), { resource_type: "auto", folder};
   })
 };
