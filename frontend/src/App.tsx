@@ -1,7 +1,19 @@
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import {Suspense} from "react";
+
 function App() {
+    const router = createBrowserRouter([
+        {
+            path: '/login',
+            element: <div>Landing Page</div>,
+            errorElement: <div>404 Error Page</div>
+        }
+    ])
   return (
     <div className="">
-      <h2>Hello world!</h2>
+        <Suspense fallback={<div>loading...</div>}>
+            <RouterProvider router={router} fallbackElement={<div>Fall back Element</div>} />
+        </Suspense>
     </div>
   );
 }
