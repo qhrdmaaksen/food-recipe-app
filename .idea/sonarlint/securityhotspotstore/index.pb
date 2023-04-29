@@ -55,8 +55,6 @@ G
 frontend/vite.config.ts,9\0\90c068302e8f67d715a544570fc20ecda9b598c2
 K
 frontend/tsconfig.node.json,8\2\8249104523fefb944491610a638662f071bf3b20
-C
-frontend/.gitignore,e\2\e23a63a9f05477a70f6e75d709dbb4eae2db742d
 Å
 Q.idea/sonarlint/securityhotspotstore/f/3/f30451335edfb80e231f658d0defc83bb7e4c3a7,d\a\da0fc6477c7b71fe17276da578e8d515eff6281f
 F
@@ -115,7 +113,3 @@ E
 frontend/src/main.tsx,d\3\d34671d283228d7092732121699241dc2e7bac4b
 K
 frontend/tailwind.config.js,e\f\ef5a90fd36dd52866b87125460df93ff827f7beb
-E
-frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
-B
-frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3
