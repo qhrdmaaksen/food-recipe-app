@@ -113,3 +113,9 @@ E
 frontend/src/main.tsx,d\3\d34671d283228d7092732121699241dc2e7bac4b
 K
 frontend/tailwind.config.js,e\f\ef5a90fd36dd52866b87125460df93ff827f7beb
+C
+frontend/index.html,a\1\a12b0e66474192f8cb9a2db83f26413a588dec1d
+E
+frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
+B
+frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3
