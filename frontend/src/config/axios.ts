@@ -57,7 +57,7 @@ instance.interceptors.response.use(
     return response;
   },
   (error) => {
-      // 응답에 에러가 있는지 확인합니다.
+    // 응답에 에러가 있는지 확인합니다.
     if (!error?.reponse?.data) {
       return;
     }
