@@ -6,6 +6,11 @@ export interface ILOGINRESPONSE{
     id: string;
 }
 
+export interface IPAYLOAD {
+    email: string;
+    password: string;
+}
+
 export interface AUTH_TYPE {
     user: string;
     loading: boolean;

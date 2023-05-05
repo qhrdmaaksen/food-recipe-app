@@ -1,10 +1,33 @@
 import recipeOne from "../../assets/recipe-one.jpg";
 import { Form, Input, Button } from "../../components";
-import { FormEvent } from "react";
+import { FormEvent, useContext, useState } from "react";
+import { AUTH_TYPE, IPAYLOAD } from "../../@types";
+import { validateEmail } from "../../utils";
+import { AuthenticationContext } from "../../context";
+import cogoToast from "cogo-toast";
 
 export const Landing = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {};
-  const handleState = (e: FormEvent<HTMLInputElement>) => {};
+  const { loading, onLogin } = useContext(AuthenticationContext) as AUTH_TYPE;
+  const [state, setState] = useState<IPAYLOAD>({ email: "", password: "" });
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // 이메일 유효성 검사
+    if (!validateEmail(state?.email)) {
+      return cogoToast.error("잘못된 이메일 주소입니다.");
+    }
+    if (!state?.password || state?.password.length < 7) {
+      return cogoToast.error("비밀번호를 입력하십시오.");
+    }
+    await onLogin(state);
+  };
+
+  const handleState = (e: FormEvent<HTMLInputElement>) => {
+    // e.currentTarget은 현재 이벤트가 발생한 요소를 가리킨다.
+    const { name, value} = e.currentTarget;
+    setState({...state, [name]: value})
+  };
+
   return (
     <div className="container bg-black text-white h-[100%] flex flex-col-reverse md:flex-row w-full">
       <div className="w-full h-full">

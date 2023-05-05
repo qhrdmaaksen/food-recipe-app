@@ -75,8 +75,6 @@ w
 G.idea/sonarlint/issuestore/a/f/af6b67d660f587d90129abd8f2a906ba458b940c,0\4\0464e053e1fc8dde94d54a2596ec4622a5e1f539
 w
 G.idea/sonarlint/issuestore/f/f/ffa12e4050dd01b6a999ca4ce4c0c13c911fc3c5,5\3\533be219157c5c60f424235ef13c68c0cbad9c5a
-J
-frontend/src/vite-env.d.ts,1\3\1365ea5108430d66cf85a308bc580fbf384390c3
 w
 G.idea/sonarlint/issuestore/0/6/060b34a076f39f3c9155a75534862bf0eb2ad1bc,b\b\bbacb60b02aa651e66d116f95030e52662937762
 Å
@@ -109,8 +107,6 @@ S
 #backend/src/middlewares/validate.ts,7\1\71825620664755bb5f00a711c4ad0945d787c92f
 K
 backend/src/model/recipe.ts,2\1\21252ac434155d586059b68208ceaf4f8cc26767
-E
-frontend/src/main.tsx,d\3\d34671d283228d7092732121699241dc2e7bac4b
 K
 frontend/tailwind.config.js,e\f\ef5a90fd36dd52866b87125460df93ff827f7beb
 C
@@ -119,3 +115,13 @@ E
 frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
 B
 frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3
+=
+frontend/.env,e\5\e51ccb9a6155f3c59685c017c8fce22c869af68e
+J
+frontend/src/hooks/auth.ts,1\0\101d634187ce5873744abd6beccb68bd827cc1b6
+L
+frontend/src/config/index.ts,3\2\325bceff0d0cb5ea9f9fd4c3d393c228a0b1f815
+C
+frontend/.gitignore,e\2\e23a63a9f05477a70f6e75d709dbb4eae2db742d
+K
+frontend/src/hooks/index.ts,e\5\e5c6a40dcd5d007a52e7e1e38a6c5a94d1a9bc20
