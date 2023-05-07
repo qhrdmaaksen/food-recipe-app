@@ -24,8 +24,8 @@ export const Landing = () => {
 
   const handleState = (e: FormEvent<HTMLInputElement>) => {
     // e.currentTarget은 현재 이벤트가 발생한 요소를 가리킨다.
-    const { name, value} = e.currentTarget;
-    setState({...state, [name]: value})
+    const { name, value } = e.currentTarget;
+    setState({ ...state, [name]: value });
   };
 
   return (

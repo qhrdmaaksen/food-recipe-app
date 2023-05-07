@@ -1,6 +1,6 @@
 import {
   AuthenticationContext,
   AuthenticationContextProvider,
-} from "./auth-context.tsx";
+} from "./auth-context";
 
 export { AuthenticationContext, AuthenticationContextProvider };
