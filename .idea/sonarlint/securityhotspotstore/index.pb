@@ -105,5 +105,19 @@ J
 frontend/src/hooks/auth.ts,1\0\101d634187ce5873744abd6beccb68bd827cc1b6
 C
 frontend/.gitignore,e\2\e23a63a9f05477a70f6e75d709dbb4eae2db742d
-U
-%frontend/src/context/auth-context.tsx,8\1\81d9da00f91899c183ba88e92b3859b25f2bd9e5
+P
+ frontend/src/components/form.tsx,d\2\d212a6e4c2fe50beb5840b8c9e7bfa0006bfa72a
+T
+$frontend/src/utils/validate-email.ts,7\7\77639c625a23c4c95df5c690fb7142af80ad5763
+K
+frontend/src/utils/index.ts,d\4\d4515cde37f05a061fac372633671324c06d265f
+J
+frontend/src/vite-env.d.ts,1\3\1365ea5108430d66cf85a308bc580fbf384390c3
+J
+frontend/postcss.config.js,2\b\2b6b07f21f4b86a668563572a541f1dfaaa7ada8
+L
+frontend/src/@types/index.ts,b\a\baf089db04e472a585a115b755419b5c5c3b294b
+P
+ frontend/src/components/index.ts,7\9\79970e3f7d819cf5771243e12d77ab1ef4d91acf
+K
+frontend/src/hooks/index.ts,e\5\e5c6a40dcd5d007a52e7e1e38a6c5a94d1a9bc20

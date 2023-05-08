@@ -7,7 +7,9 @@ import { AuthenticationContext } from "../../context";
 import cogoToast from "cogo-toast";
 
 export const Landing = () => {
+  // AuthenticationContext에서 loading과 onLogin을 가져온다.
   const { loading, onLogin } = useContext(AuthenticationContext) as AUTH_TYPE;
+  // state를 선언하고 초기값을 설정한다.
   const [state, setState] = useState<IPAYLOAD>({ email: "", password: "" });
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -39,25 +41,31 @@ export const Landing = () => {
             <h2 className="text-orange-500 front-extrabold text-xl underline underline-offset-4">
               Foodie
             </h2>
+
             <Input
               name="email"
               type="text"
               placeholder="Email"
               handleChange={handleState}
               className={`bg-zinc-900 py-1 px-4 w-full shadow-xl placeholder:text-sm hover:bg-zinc-800 cursor-pointer focus:outline-none`}
+              disabled={loading}
             />
+
             <Input
               name="password"
               type="password"
               placeholder="Password"
               handleChange={handleState}
               className={`bg-zinc-900 py-1 px-4 w-full placeholder:text-sm hover:bg-zinc-800 cursor-pointer focus:outline-none`}
+              disabled={loading}
             />
+
             <div className="w-full md:w-[50%] m-auto flex flex-col gap-2">
               <Button
-                title={"Login"}
+                title={loading ? "loading..." : "Login"}
                 type="submit"
                 className={`bg-orange-500 text-white hover:bg-orange-600 py-1 px-6 w-full`}
+                disabled={loading}
               />
             </div>
           </div>
