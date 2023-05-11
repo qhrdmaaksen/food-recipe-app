@@ -1,6 +1,6 @@
-import {createContext, ReactNode, useEffect, useState,} from "react";
-import {AUTH_TYPE} from "../@types";
-import {useAuth} from "../hooks";
+import { createContext, ReactNode, useEffect, useState } from "react";
+import { AUTH_TYPE } from "../@types";
+import { useAuth } from "../hooks";
 
 export const AuthenticationContext = createContext<AUTH_TYPE | null>(null);
 
