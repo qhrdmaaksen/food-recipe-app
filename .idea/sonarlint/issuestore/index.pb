@@ -5,8 +5,6 @@ B
 backend/.gitignore,7\e\7e16691a9fc60084a157565ec422c8094d3df67c
 J
 backend/src/routes/auth.ts,b\e\be2310e742f999a225d4d679ee3af5bc43afa50c
-W
-'backend/src/schema-validations/index.ts,a\f\af6b67d660f587d90129abd8f2a906ba458b940c
 M
 backend/src/@types/index.d.ts,b\0\b0686ce57803759e7e32319bb56a202b1959050e
 R
@@ -99,8 +97,6 @@ S
 #backend/src/middlewares/validate.ts,7\1\71825620664755bb5f00a711c4ad0945d787c92f
 K
 backend/src/model/recipe.ts,2\1\21252ac434155d586059b68208ceaf4f8cc26767
-C
-frontend/.gitignore,e\2\e23a63a9f05477a70f6e75d709dbb4eae2db742d
 P
  frontend/src/components/form.tsx,d\2\d212a6e4c2fe50beb5840b8c9e7bfa0006bfa72a
 T
@@ -108,13 +104,9 @@ $frontend/src/utils/validate-email.ts,7\7\77639c625a23c4c95df5c690fb7142af80ad5
 K
 frontend/src/utils/index.ts,d\4\d4515cde37f05a061fac372633671324c06d265f
 J
-frontend/src/vite-env.d.ts,1\3\1365ea5108430d66cf85a308bc580fbf384390c3
-J
 frontend/postcss.config.js,2\b\2b6b07f21f4b86a668563572a541f1dfaaa7ada8
 P
  frontend/src/components/index.ts,7\9\79970e3f7d819cf5771243e12d77ab1ef4d91acf
-L
-frontend/src/config/index.ts,3\2\325bceff0d0cb5ea9f9fd4c3d393c228a0b1f815
 C
 frontend/index.html,a\1\a12b0e66474192f8cb9a2db83f26413a588dec1d
 M
@@ -137,3 +129,5 @@ R
 "frontend/src/components/button.tsx,0\0\00b799693bcd4a82d9d9a943778616fc84143169
 Q
 !frontend/src/components/input.tsx,3\0\30d6fd60cbe55f7e6965a89515bf1b480d8136ec
+D
+backend/src/index.ts,c\a\cadccc3f718c67fe80df9a5bc7dcc79a0a032c23

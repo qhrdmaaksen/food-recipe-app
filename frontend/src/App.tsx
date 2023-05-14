@@ -4,6 +4,7 @@ import { Landing } from "./pages/Landing";
 import {Home} from "./pages/Dashboard";
 
 function App() {
+  // router 설정, element 는 해당 path 에 접근했을 때 보여줄 컴포넌트
   const router = createBrowserRouter([
     {
       path: "/",
@@ -16,7 +17,7 @@ function App() {
       errorElement: <div>404 Error Page2</div>,
       children: [
         {
-          path: '/',
+          path: '/dashboard',
           element: <Home />
         }
       ]

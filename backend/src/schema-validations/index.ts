@@ -41,7 +41,7 @@ const joinSchema = yup.object({
     email: yup.string().email().required("이메일이 필요합니다"),
     password: yup
       .string()
-      .min(7, "암호는 6보다 커야 합니다.")
+      .min(7, "암호는 6 자리 이하는 사용할 수 없습니다.")
       .required("비밀번호가 필요합니다"),
   }),
 });
