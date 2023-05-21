@@ -1,10 +1,11 @@
-import { useContext, useLayoutEffect } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 import { AuthenticationContext } from "../context";
 import { AUTH_TYPE } from "../@types";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Button } from "../components";
 
 const routes = [
-  { name: "home", to: "/dashboard" },
+  { name: "Home", to: "/dashboard" },
   { name: "Add Recipe", to: "/dashboard/addrecipe" },
   { name: "My Recipes", to: "/dashboard/myrecipes" },
 ];
@@ -12,7 +13,7 @@ const routes = [
 export const DashboardLayout = () => {
   const navigate = useNavigate();
   // useParams 를 통해 현재 path 를 가져온다.
-  const pathname = useParams().pathname;
+  const pathname = useLocation().pathname;
   // 렌더링 이후 로그인이 되어있지 않은 경우 landing page 로 이동한다.
   useLayoutEffect(() => {
     if (!sessionStorage.getItem("email") && !sessionStorage.getItem("token")) {
@@ -21,6 +22,13 @@ export const DashboardLayout = () => {
   }, []);
   // onLogout, loading 은 AuthenticationContext 에서 가져온다.
   const { onLogout, loading } = useContext(AuthenticationContext) as AUTH_TYPE;
+
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleIsOpen = () => {
+    setIsOpen((prev) => !prev)
+  }
+
   return (
     <div className="w-full h-full bg-black overflow-x-hidden">
       <div className="h-[60px] md:h-[80px] bg-zinc-900 flex items-center justify-between px-3 sticky top-0 z-50">
@@ -30,6 +38,8 @@ export const DashboardLayout = () => {
           </h2>
           <span className="text-orange-700 font-extrabold text-xl pl-2">.</span>
         </div>
+
+        {/* menu bar*/}
       </div>
       <div className="flex flex-col md:flex-row w-full h-full z-10 relative">
         <div className="hidden md:block bg-zinc-900 h-full w-[20%] fixed">
@@ -43,21 +53,26 @@ export const DashboardLayout = () => {
               <p className="text-orange-500 font-light">krman@gmail.com</p>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col gap-y-1 mt-3">
-          {routes.map(({ name, to }) => (
-            <NavLink
-              key={name + to}
-              to={to}
-              className={({ isActive }) =>
-                isActive && pathname === to
-                  ? "text-white font-thin text-sm bg-orange-500 p-4"
-                  : "text-white font-thin text-sm hover:bg-orange-500 p4"
-              }
-            >
-              {name}
-            </NavLink>
-          ))}
+          <div className="flex flex-col gap-y-1 mt-3">
+            {routes.map(({ name, to }) => (
+              <NavLink
+                key={name + to}
+                to={to}
+                className={({ isActive }) =>
+                  isActive && pathname === to
+                    ? "text-white font-thin text-sm bg-orange-500 p-4"
+                    : "text-white font-thin text-sm hover:bg-orange-500 p4"
+                }
+              >
+                {name}
+              </NavLink>
+            ))}
+            <Button
+              title="Logout"
+              handleClick={onLogout}
+              className="text-white font-thin text-sm text-left hover:bg-orange-500 p-4"
+            />
+          </div>
         </div>
       </div>
     </div>
