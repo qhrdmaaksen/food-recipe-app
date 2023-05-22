@@ -9,3 +9,9 @@ J
 frontend/src/vite-env.d.ts,1\3\1365ea5108430d66cf85a308bc580fbf384390c3
 L
 frontend/src/config/axios.ts,a\9\a91216fe3ef65651489224aa78ae8ae90a0fe587
+J
+frontend/src/hooks/auth.ts,1\0\101d634187ce5873744abd6beccb68bd827cc1b6
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
