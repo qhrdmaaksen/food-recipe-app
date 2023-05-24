@@ -11,7 +11,7 @@ L
 frontend/src/config/axios.ts,a\9\a91216fe3ef65651489224aa78ae8ae90a0fe587
 J
 frontend/src/hooks/auth.ts,1\0\101d634187ce5873744abd6beccb68bd827cc1b6
-]
--.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+T
+$frontend/src/pages/Landing/index.tsx,1\1\115ade141b923c3f2d5addcdc70e9d314e8f4e12
+L
+frontend/src/@types/index.ts,b\a\baf089db04e472a585a115b755419b5c5c3b294b

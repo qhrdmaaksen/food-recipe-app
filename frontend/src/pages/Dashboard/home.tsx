@@ -1,3 +1,3 @@
 export const Home = () => {
-    return <h2 className='text-white'>Home</h2>;
+    return <div className='text-white w-full h-full'>Home</div>;
 }
