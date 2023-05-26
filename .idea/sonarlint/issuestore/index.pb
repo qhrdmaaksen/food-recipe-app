@@ -105,8 +105,6 @@ K
 frontend/src/utils/index.ts,d\4\d4515cde37f05a061fac372633671324c06d265f
 J
 frontend/postcss.config.js,2\b\2b6b07f21f4b86a668563572a541f1dfaaa7ada8
-P
- frontend/src/components/index.ts,7\9\79970e3f7d819cf5771243e12d77ab1ef4d91acf
 C
 frontend/index.html,a\1\a12b0e66474192f8cb9a2db83f26413a588dec1d
 M
