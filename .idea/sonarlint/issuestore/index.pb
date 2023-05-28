@@ -97,8 +97,6 @@ S
 #backend/src/middlewares/validate.ts,7\1\71825620664755bb5f00a711c4ad0945d787c92f
 K
 backend/src/model/recipe.ts,2\1\21252ac434155d586059b68208ceaf4f8cc26767
-P
- frontend/src/components/form.tsx,d\2\d212a6e4c2fe50beb5840b8c9e7bfa0006bfa72a
 T
 $frontend/src/utils/validate-email.ts,7\7\77639c625a23c4c95df5c690fb7142af80ad5763
 K
@@ -121,8 +119,6 @@ G
 frontend/vite.config.ts,9\0\90c068302e8f67d715a544570fc20ecda9b598c2
 B
 frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3
-Q
-!frontend/src/components/input.tsx,3\0\30d6fd60cbe55f7e6965a89515bf1b480d8136ec
 D
 backend/src/index.ts,c\a\cadccc3f718c67fe80df9a5bc7dcc79a0a032c23
 K
@@ -147,5 +143,9 @@ J
 frontend/src/hooks/auth.ts,1\0\101d634187ce5873744abd6beccb68bd827cc1b6
 T
 $frontend/src/pages/Landing/index.tsx,1\1\115ade141b923c3f2d5addcdc70e9d314e8f4e12
-L
-frontend/src/@types/index.ts,b\a\baf089db04e472a585a115b755419b5c5c3b294b
+E
+frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
+U
+%frontend/src/pages/Dashboard/index.ts,9\8\985b3db8d39f5fa5589af60306e329ebbfb059e2
+M
+frontend/src/layouts/index.ts,e\d\ed507fc09052f69c054af04c468e9234cdc96a22

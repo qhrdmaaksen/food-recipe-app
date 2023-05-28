@@ -13,5 +13,9 @@ J
 frontend/src/hooks/auth.ts,1\0\101d634187ce5873744abd6beccb68bd827cc1b6
 T
 $frontend/src/pages/Landing/index.tsx,1\1\115ade141b923c3f2d5addcdc70e9d314e8f4e12
-L
-frontend/src/@types/index.ts,b\a\baf089db04e472a585a115b755419b5c5c3b294b
+E
+frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
+U
+%frontend/src/pages/Dashboard/index.ts,9\8\985b3db8d39f5fa5589af60306e329ebbfb059e2
+M
+frontend/src/layouts/index.ts,e\d\ed507fc09052f69c054af04c468e9234cdc96a22
