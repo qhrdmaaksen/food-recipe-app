@@ -17,5 +17,9 @@ E
 frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
 U
 %frontend/src/pages/Dashboard/index.ts,9\8\985b3db8d39f5fa5589af60306e329ebbfb059e2
-M
-frontend/src/layouts/index.ts,e\d\ed507fc09052f69c054af04c468e9234cdc96a22
+U
+%frontend/src/context/auth-context.tsx,8\1\81d9da00f91899c183ba88e92b3859b25f2bd9e5
+R
+"frontend/src/components/button.tsx,0\0\00b799693bcd4a82d9d9a943778616fc84143169
+D
+frontend/src/App.tsx,b\9\b9c5384815ed26f7912bd4d34cab45985cb9a0cd

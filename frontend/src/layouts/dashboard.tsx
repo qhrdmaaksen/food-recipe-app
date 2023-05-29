@@ -96,7 +96,7 @@ export const DashboardLayout = () => {
                 <p className="text-orange-700 font-light">krman@gmail.com</p>
               </div>
             </div>
-            <div className="flex flex-col gay-y-1 mt-3">
+            <div className="flex flex-col gap-y-1 mt-3">
               {routes.map(({ name, to }) => (
                 <NavLink
                   key={name + to}
