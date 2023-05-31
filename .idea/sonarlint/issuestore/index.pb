@@ -117,12 +117,8 @@ L
 frontend/tailwind.config.cjs,5\1\51989ba835d611f3a655d2668731ad45c93ad362
 G
 frontend/vite.config.ts,9\0\90c068302e8f67d715a544570fc20ecda9b598c2
-B
-frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3
 D
 backend/src/index.ts,c\a\cadccc3f718c67fe80df9a5bc7dcc79a0a032c23
-K
-frontend/src/hooks/index.ts,e\5\e5c6a40dcd5d007a52e7e1e38a6c5a94d1a9bc20
 F
 frontend/src/index.css,9\1\91e522be11677dbeaea3b85493b4868d2728cb6c
 E
@@ -137,14 +133,10 @@ L
 frontend/src/config/index.ts,3\2\325bceff0d0cb5ea9f9fd4c3d393c228a0b1f815
 J
 frontend/src/vite-env.d.ts,1\3\1365ea5108430d66cf85a308bc580fbf384390c3
-L
-frontend/src/config/axios.ts,a\9\a91216fe3ef65651489224aa78ae8ae90a0fe587
 J
 frontend/src/hooks/auth.ts,1\0\101d634187ce5873744abd6beccb68bd827cc1b6
 T
 $frontend/src/pages/Landing/index.tsx,1\1\115ade141b923c3f2d5addcdc70e9d314e8f4e12
-E
-frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
 U
 %frontend/src/pages/Dashboard/index.ts,9\8\985b3db8d39f5fa5589af60306e329ebbfb059e2
 U
@@ -153,3 +145,11 @@ R
 "frontend/src/components/button.tsx,0\0\00b799693bcd4a82d9d9a943778616fc84143169
 D
 frontend/src/App.tsx,b\9\b9c5384815ed26f7912bd4d34cab45985cb9a0cd
+M
+frontend/src/layouts/index.ts,e\d\ed507fc09052f69c054af04c468e9234cdc96a22
+P
+ frontend/src/components/form.tsx,d\2\d212a6e4c2fe50beb5840b8c9e7bfa0006bfa72a
+Q
+!frontend/src/components/input.tsx,3\0\30d6fd60cbe55f7e6965a89515bf1b480d8136ec
+V
+&frontend/src/components/search-box.tsx,e\a\eabf2d250a8743a2a26cfbfb935a5bc7fe8ef6aa
