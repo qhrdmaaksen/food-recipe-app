@@ -5,6 +5,7 @@ import { IRECIPERESPONSE } from "../../@types";
 import { useRecipe } from "../../hooks";
 import { instance } from "../../config";
 import useSWR from "swr";
+import cogoToast from "cogo-toast";
 
 export const Home = () => {
   //use swr fetcher
@@ -17,6 +18,12 @@ export const Home = () => {
   const [state, setState] = useState<IRECIPERESPONSE[]>(
     data as unknown as IRECIPERESPONSE[] | []
   );
+
+  if (error) {
+    console.log(error)
+    cogoToast.error(error?.response?.data?.error);
+    return null;
+  }
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

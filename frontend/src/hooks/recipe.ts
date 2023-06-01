@@ -3,6 +3,7 @@ import { IRECIPERESPONSE } from "../@types";
 import { AxiosResponse } from "axios";
 import { instance } from "../config";
 
+// useRecipe 훅 : 레시피 검색
 export const useRecipe = () => {
   const [loading, setLoading] = useState<boolean>(false);
 

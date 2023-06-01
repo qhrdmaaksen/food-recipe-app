@@ -153,3 +153,11 @@ Q
 !frontend/src/components/input.tsx,3\0\30d6fd60cbe55f7e6965a89515bf1b480d8136ec
 V
 &frontend/src/components/search-box.tsx,e\a\eabf2d250a8743a2a26cfbfb935a5bc7fe8ef6aa
+L
+frontend/src/@types/index.ts,b\a\baf089db04e472a585a115b755419b5c5c3b294b
+R
+"frontend/src/layouts/dashboard.tsx,8\f\8f752b7ee36fee415a2d01655f23abfe8eecec6a
+B
+frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3
+E
+frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759

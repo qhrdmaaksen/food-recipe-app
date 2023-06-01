@@ -9,7 +9,7 @@ export const NoRecipe = () => {
   };
   return (
     <div className="flex items-center justify-center flex-col md:w-[50%] m-auto">
-      <h3>아직 레시피가 없습니다.</h3>
+      <h3 className="text-white font-bold text-lg p-4">레시피를 찾을 수 없습니다.</h3>
       <Button
         handleClick={handleNavigate}
         title="레시피 추가"
