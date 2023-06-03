@@ -6,6 +6,7 @@ import { useRecipe } from "../../hooks";
 import { instance } from "../../config";
 import useSWR from "swr";
 import cogoToast from "cogo-toast";
+import {SearchLoader, UILoader} from "../../components/loaders";
 
 export const Home = () => {
   //use swr fetcher
@@ -45,7 +46,7 @@ export const Home = () => {
     setQuery,
   };
   return (
-      <Suspense fallback={<div>Loading</div>}>
+      <Suspense fallback={<UILoader />}>
       <div className="text-white w-full h-full">
         <SearchBox {...props} />
         {/*
@@ -56,6 +57,8 @@ export const Home = () => {
                 setQuery
             />
         */}
+
+        {loading ? <SearchLoader /> : <></>}
 
         {!!state?.length ? (
           <div className="flex flex-wrap gap-3 flex-col items-center justify-center md:justify-start md:items-start md:flex-row w-full">
