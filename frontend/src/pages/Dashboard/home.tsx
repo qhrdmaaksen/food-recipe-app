@@ -1,6 +1,6 @@
 import { RecipeCard, SearchBox } from "../../components";
-import { FormEvent, Suspense, useState } from "react";
-import { NoRecipe } from "./common";
+import React, { FormEvent, Suspense, useState } from "react";
+import { NoRecipe } from "../common";
 import { IRECIPERESPONSE } from "../../@types";
 import { useRecipe } from "../../hooks";
 import { instance } from "../../config";
@@ -57,8 +57,6 @@ export const Home = () => {
                 setQuery
             />
         */}
-
-        {loading ? <SearchLoader /> : <></>}
 
         {!!state?.length ? (
           <div className="flex flex-wrap gap-3 flex-col items-center justify-center md:justify-start md:items-start md:flex-row w-full">

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../../components";
+import { Button } from "../../components";
 
 // 레시피가 없는 경우
 export const NoRecipe = () => {

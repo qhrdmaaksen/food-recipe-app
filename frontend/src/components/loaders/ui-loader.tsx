@@ -1,3 +1,5 @@
+import './ui-style.css'
+
 export const UILoader = () => {
   return (
     <div className="flex items-center justify-center w-[100%] h-[100vh] bg-zinc-900">

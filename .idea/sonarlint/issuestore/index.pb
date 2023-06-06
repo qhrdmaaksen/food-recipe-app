@@ -138,8 +138,6 @@ J
 T
 $frontend/src/pages/Landing/index.tsx,1\1\115ade141b923c3f2d5addcdc70e9d314e8f4e12
 U
-%frontend/src/pages/Dashboard/index.ts,9\8\985b3db8d39f5fa5589af60306e329ebbfb059e2
-U
 %frontend/src/context/auth-context.tsx,8\1\81d9da00f91899c183ba88e92b3859b25f2bd9e5
 R
 "frontend/src/components/button.tsx,0\0\00b799693bcd4a82d9d9a943778616fc84143169
@@ -151,11 +149,17 @@ Q
 !frontend/src/components/input.tsx,3\0\30d6fd60cbe55f7e6965a89515bf1b480d8136ec
 V
 &frontend/src/components/search-box.tsx,e\a\eabf2d250a8743a2a26cfbfb935a5bc7fe8ef6aa
-L
-frontend/src/@types/index.ts,b\a\baf089db04e472a585a115b755419b5c5c3b294b
 R
 "frontend/src/layouts/dashboard.tsx,8\f\8f752b7ee36fee415a2d01655f23abfe8eecec6a
 B
 frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3
 E
 frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
+L
+frontend/src/config/axios.ts,a\9\a91216fe3ef65651489224aa78ae8ae90a0fe587
+K
+frontend/src/hooks/index.ts,e\5\e5c6a40dcd5d007a52e7e1e38a6c5a94d1a9bc20
+P
+ frontend/src/components/card.tsx,7\8\78cb799fbd06ad2fd499d0a9aac6966fe40baa60
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

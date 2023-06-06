@@ -1,4 +1,4 @@
-import "./ui-style.css";
+import "./search-style.css";
 
 export const SearchLoader = () => {
   return (

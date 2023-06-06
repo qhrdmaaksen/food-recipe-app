@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Suspense } from "react";
 import { Landing } from "./pages/Landing";
-import {Home} from "./pages/Dashboard";
-import {DashboardLayout} from "./layouts";
-import {UILoader} from "./components/loaders";
+import {AddRecipe, Home} from "./pages/Dashboard";
+import { DashboardLayout } from "./layouts";
+import { UILoader } from "./components/loaders";
 
 function App() {
   // router 설정, element 는 해당 path 에 접근했을 때 보여줄 컴포넌트
@@ -19,11 +19,15 @@ function App() {
       errorElement: <div>404 Error Page2</div>,
       children: [
         {
-          path: '/dashboard',
-          element: <Home />
-        }
-      ]
-    }
+          path: "/dashboard",
+          element: <Home />,
+        },
+        {
+          path: "/dashboard/addrecipe",
+          element: <AddRecipe />,
+        },
+      ],
+    },
   ]);
   return (
     <div className="container w-[100vw] h-[100vh]">
