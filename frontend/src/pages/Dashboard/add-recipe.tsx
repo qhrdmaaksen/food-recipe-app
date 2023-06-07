@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useRecipe } from "../../hooks";
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, DragEvent } from "react";
 import { IRECIPE } from "../../@types";
 import { Button, Form, Input, TextArea } from "../../components";
+import {ImageUploader} from "./common";
 
 export const AddRecipe = () => {
   const navigate = useNavigate();
@@ -31,6 +32,19 @@ export const AddRecipe = () => {
     setState({ ...state, [name]: value });
   };
 
+  // 드래그할 수 있도록 부모를 준비한 다음 borwser가 이미지를 열지 못하도록 합니다.
+  const handleOnDragOver = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault()
+  }
+
+  const handleOnDrop = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault()
+  }
+
+  const handleFile = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault()
+  }
+
   return (
     <div className="text-white">
       <h2 className="font-extrabold text-xl">레시피 추가</h2>
@@ -58,6 +72,13 @@ export const AddRecipe = () => {
         </div>
         <div className="w-full flex flex-col gap-2">
           {/* 이미지 업로드 (드래그 앤 드롭) */}
+          <ImageUploader
+            name={image?.name as string}
+            handleDragOver={handleOnDragOver}
+            handleOnDrop={handleOnDrop}
+            handleFile={handleFile}
+            className={`bg-zinc-900 py-1 px-4 w-full hover:bg-zinc-800 cursor-pointer focus:outline-none`}
+          />
           <TextArea
             disabled={loading}
             placeholder="레시피 설명"

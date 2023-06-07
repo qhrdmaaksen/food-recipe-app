@@ -1,6 +1,6 @@
 import { RecipeCard, SearchBox } from "../../components";
 import React, { FormEvent, Suspense, useState } from "react";
-import { NoRecipe } from "../common";
+import { NoRecipe } from "./common";
 import { IRECIPERESPONSE } from "../../@types";
 import { useRecipe } from "../../hooks";
 import { instance } from "../../config";
