@@ -14,7 +14,7 @@ const routes = [
 
 export const DashboardLayout = () => {
   // onLogout, loading 은 AuthenticationContext 에서 가져온다.
-  const { onLogout, loading } = useContext(AuthenticationContext) as AUTH_TYPE;
+  const { onLogout, loading, user } = useContext(AuthenticationContext) as AUTH_TYPE;
   const navigate = useNavigate();
   // useParams 를 통해 현재 path 를 가져온다.
   const pathname = useLocation().pathname;
@@ -59,7 +59,7 @@ export const DashboardLayout = () => {
               alt="A image"
             />
             <div>
-              <p className="text-orange-500 font-light">krman@gmail.com</p>
+              <p className="text-orange-500 font-light">{user}</p>
             </div>
           </div>
           <div className="flex flex-col gap-y-1 mt-3">

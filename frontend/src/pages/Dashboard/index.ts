@@ -1,4 +1,5 @@
-import {Home} from './home';
-import {AddRecipe} from './add-recipe';
+import { Home } from "./home";
+import { AddRecipe } from "./add-recipe";
+import { MyRecipes } from "./my-recipes";
 
-export {Home, AddRecipe};
+export { Home, AddRecipe, MyRecipes };

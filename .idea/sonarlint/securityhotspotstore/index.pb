@@ -21,8 +21,6 @@ P
  frontend/src/components/form.tsx,d\2\d212a6e4c2fe50beb5840b8c9e7bfa0006bfa72a
 V
 &frontend/src/components/search-box.tsx,e\a\eabf2d250a8743a2a26cfbfb935a5bc7fe8ef6aa
-R
-"frontend/src/layouts/dashboard.tsx,8\f\8f752b7ee36fee415a2d01655f23abfe8eecec6a
 E
 frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
 B
@@ -37,16 +35,10 @@ K
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 L
 frontend/src/@types/index.ts,b\a\baf089db04e472a585a115b755419b5c5c3b294b
-D
-frontend/src/App.tsx,b\9\b9c5384815ed26f7912bd4d34cab45985cb9a0cd
-W
-'frontend/src/pages/common/no-recipe.tsx,9\e\9eea4b1b9e7b1d06ed8bfbc018767ed830033b96
 `
 0frontend/src/components/loaders/search-style.css,0\5\054cc776f7e7fcf37871279b4ea61891af576e98
 X
 (frontend/src/components/loaders/index.ts,8\7\87b60c50c50504b4a5f13526720b96ce8180a836
-R
-"frontend/src/pages/common/index.ts,6\b\6b6eac7f0914c20139400982bc56f4ab22f4a6c8
 ]
 -frontend/src/components/loaders/ui-loader.tsx,9\c\9c29f50b94c20a61b4bafd2c7b8fa0c797e6f22e
 a
@@ -59,5 +51,5 @@ L
 frontend/src/hooks/recipe.ts,5\7\57f18878287b8d987bbd2813b2498c9d5976e602
 T
 $frontend/src/components/textarea.tsx,e\1\e1a0c6c20c7b0373d3ec864c3be173bd60c6cdfa
-U
-%frontend/src/pages/Dashboard/index.ts,9\8\985b3db8d39f5fa5589af60306e329ebbfb059e2
+a
+1frontend/src/pages/Dashboard/common/no-recipe.tsx,0\5\05c1eeb2ca35af6a3196032774fc292e10300aee

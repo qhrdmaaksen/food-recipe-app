@@ -10,6 +10,7 @@ export const SUPPORTED_FORMATS = [
 
 export const validateImageType = (value: File) => {
   if (value) {
+    // 해당 파일을 찾을 수 있는지 확인
     return SUPPORTED_FORMATS.includes(value.type);
   }
 };

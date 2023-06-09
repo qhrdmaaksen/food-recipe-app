@@ -1,5 +1,5 @@
 import React, { FormEvent, DragEvent } from "react";
-import {Input} from "../../../components";
+import { Input } from "../../../components";
 
 // image drag and drop
 export const ImageUploader = ({
@@ -26,10 +26,10 @@ export const ImageUploader = ({
         <p>이미지를 여기로 옮기기</p>
         <p>or</p>
         <label
-            className="font-light text-lg text-orange-500 hover:cursor-pointer"
-            htmlFor-="file"
+          className="font-light text-lg text-orange-500 hover:cursor-pointer"
+          htmlFor-="file"
         >
-            파일 선택
+          파일 선택
         </label>
         <Input
           id="file"
