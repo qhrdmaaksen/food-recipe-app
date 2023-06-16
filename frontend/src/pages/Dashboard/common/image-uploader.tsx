@@ -27,7 +27,7 @@ export const ImageUploader = ({
         <p>or</p>
         <label
           className="font-light text-lg text-orange-500 hover:cursor-pointer"
-          htmlFor-="file"
+          htmlFor="file"
         >
           파일 선택
         </label>

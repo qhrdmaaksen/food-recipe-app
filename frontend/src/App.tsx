@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Suspense } from "react";
 import { Landing } from "./pages/Landing";
-import {AddRecipe, Home, MyRecipes} from "./pages/Dashboard";
+import {AddRecipe, Home, More, MyRecipes} from "./pages/Dashboard";
 import { DashboardLayout } from "./layouts";
 import { UILoader } from "./components/loaders";
 
@@ -29,6 +29,10 @@ function App() {
         {
           path: "/dashboard/myrecipes",
           element: <MyRecipes />,
+        },
+        {
+          path: "/dashboard/recipe/:id",
+          element: <More />,
         },
       ],
     },

@@ -9,10 +9,6 @@ J
 frontend/src/vite-env.d.ts,1\3\1365ea5108430d66cf85a308bc580fbf384390c3
 J
 frontend/src/hooks/auth.ts,1\0\101d634187ce5873744abd6beccb68bd827cc1b6
-T
-$frontend/src/pages/Landing/index.tsx,1\1\115ade141b923c3f2d5addcdc70e9d314e8f4e12
-U
-%frontend/src/context/auth-context.tsx,8\1\81d9da00f91899c183ba88e92b3859b25f2bd9e5
 R
 "frontend/src/components/button.tsx,0\0\00b799693bcd4a82d9d9a943778616fc84143169
 M
@@ -47,9 +43,17 @@ a
 ,frontend/src/components/loaders/ui-style.css,d\9\d93a5608fe326139284420f3e5473354df9ccdc2
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
-L
-frontend/src/hooks/recipe.ts,5\7\57f18878287b8d987bbd2813b2498c9d5976e602
 T
 $frontend/src/components/textarea.tsx,e\1\e1a0c6c20c7b0373d3ec864c3be173bd60c6cdfa
 a
 1frontend/src/pages/Dashboard/common/no-recipe.tsx,0\5\05c1eeb2ca35af6a3196032774fc292e10300aee
+P
+ frontend/src/components/index.ts,7\9\79970e3f7d819cf5771243e12d77ab1ef4d91acf
+Q
+!frontend/src/components/input.tsx,3\0\30d6fd60cbe55f7e6965a89515bf1b480d8136ec
+\
+,frontend/src/pages/Dashboard/common/index.ts,9\d\9dcee8d695145d93722cb210239e4c9d4385deb9
+T
+$frontend/src/utils/validate-image.ts,2\a\2a0f278f835dc6f4f2fc7a8536b954abf41bb48b
+T
+$frontend/src/utils/validate-email.ts,7\7\77639c625a23c4c95df5c690fb7142af80ad5763

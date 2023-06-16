@@ -1,12 +1,27 @@
 import recipeOne from "../../assets/recipe-one.jpg";
 import { Form, Input, Button } from "../../components";
-import { FormEvent, useContext, useState } from "react";
+import {FormEvent, useContext, useLayoutEffect, useState} from "react";
 import { AUTH_TYPE, IPAYLOAD } from "../../@types";
 import { validateEmail } from "../../utils";
 import { AuthenticationContext } from "../../context";
 import cogoToast from "cogo-toast";
+import {useNavigate} from "react-router-dom";
 
 export const Landing = () => {
+  const navigate = useNavigate()
+
+  // useLayoutEffect는 useEffect와 비슷하지만, 렌더링 결과가 돔에 반영된 직후에 동기적으로 호출된다는 점이 다르다.
+  useLayoutEffect(() => {
+    // sessionStorage에 token과 email이 있으면 dashboard로 이동한다.
+    // 로그인이 되어있는 상태에서는 로그인 페이지로 이동하지 않도록 한다.
+    if(
+        !!sessionStorage.getItem("token") &&
+        !!sessionStorage.getItem("email")
+    ) {
+      navigate("/dashboard")
+    }
+  })
+
   // AuthenticationContext에서 loading과 onLogin을 가져온다.
   const { loading, onLogin } = useContext(AuthenticationContext) as AUTH_TYPE;
   // state를 선언하고 초기값을 설정한다.
