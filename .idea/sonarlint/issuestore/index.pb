@@ -115,8 +115,6 @@ G
 frontend/vite.config.ts,9\0\90c068302e8f67d715a544570fc20ecda9b598c2
 D
 backend/src/index.ts,c\a\cadccc3f718c67fe80df9a5bc7dcc79a0a032c23
-F
-frontend/src/index.css,9\1\91e522be11677dbeaea3b85493b4868d2728cb6c
 E
 frontend/src/main.tsx,d\3\d34671d283228d7092732121699241dc2e7bac4b
 =

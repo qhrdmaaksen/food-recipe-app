@@ -11,6 +11,7 @@ export const More = () => {
   const params = useParams().id;
   // fetcher 에는 api 주소를 넣고, 해당 api 를 통해 데이터를 가져온다.
   const fetcher = (url: string) => instance.get(url).then((res) => res.data);
+  // suspense 가 true 이므로, swr 로 데이터를 가져올 때까지 기다린다.
   const { data, error } = useSWR("/recipe/" + params, fetcher, {
     suspense: true,
   });

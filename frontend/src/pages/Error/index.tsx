@@ -15,7 +15,7 @@ export const ErrorPage = () => {
       <h1 className="text-lg font-extrabold text-orange-500">Oops!</h1>
       <p className="text-white">죄송합니다. 예상치 못한 오류가 발생했습니다.</p>
       <Button
-        title="새로고침하려면 클릭하세요."
+        title="홈페이지로 이동하시려면 새로고침을 하세요."
         handleClick={handleNavigate}
         className={`bg-orange-500 text-white hover:bg-orange-600 py-1 px-2 w-[50%]`}
       />
